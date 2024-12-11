@@ -1,0 +1,32 @@
+{
+  "name": "media-converter",
+  "version": "1.0.0",
+  "description": "A scalable Node.js application for media conversion",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "postinstall": "curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /app/.ffmpeg && export PATH=/app/.ffmpeg:$PATH"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "helmet": "^6.0.1",
+    "multer": "^1.4.4",
+    "express-rate-limit": "^6.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "Kashan Shah",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/media-converter.git"
+  },
+  "keywords": ["media", "converter", "ffmpeg", "audio", "video", "nodejs"]
+}
