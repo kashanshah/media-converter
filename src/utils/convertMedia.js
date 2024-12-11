@@ -1,5 +1,8 @@
 const ffmpeg = require('fluent-ffmpeg');
 
+// Set the custom FFmpeg path
+ffmpeg.setFfmpegPath('/tmp/ffmpeg/ffmpeg');
+
 function convertMedia(inputPath, outputPath, format, callback) {
     ffmpeg(inputPath)
         .output(outputPath)
