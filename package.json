@@ -4,9 +4,9 @@
   "description": "A scalable Node.js application for media conversion",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "postinstall": "curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /app/.ffmpeg && export PATH=/app/.ffmpeg:$PATH"
+    "postinstall": "mkdir -p /app/.ffmpeg && curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /app/.ffmpeg --strip-components=1 && export PATH=/app/.ffmpeg:$PATH",
+    "start": "node src/app.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
